@@ -6,10 +6,10 @@ import { DynamicModal } from "../component/DynamicModal";
 import { Button } from "react-bootstrap";
 import { EditArticle } from "../component/article/EditArticle";
 
-const ArticleCard = (prop) => {
-  const { article } = prop;
-  const { removeArticle } = prop;
-  const { showEditModal } = prop;
+function ArticleCard(props) {
+  const { article } = props;
+  const { removeArticle } = props;
+  const { showEditModal } = props;
 
   function deleteArticle() {
     axios
@@ -47,7 +47,7 @@ const ArticleCard = (prop) => {
       </div>
     </div>
   );
-};
+}
 
 export default function Articles() {
   const [articles, setArticles] = useState([]);
