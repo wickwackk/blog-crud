@@ -14,7 +14,7 @@ export const EditArticle = ({ article, updateArticle }) => {
     axios
       .get(`http://localhost:8000/categories`)
       .then((res) => setCategories(res.data));
-  });
+  }, []);
 
   function submitHandler() {
     const editedArticle = {
